@@ -293,6 +293,8 @@ client.on('message', message => {
 		message.reply("some von drama? I'm listening!");
 	} else if(message.content.toLowerCase().indexOf("auxice") != -1) {
 		message.reply("do it @Von#6488 !!");
+	} else if(message.content.toLowerCase().indexOf("tell us more stewy") != -1) {
+		message.reply("yeah please tell us some more mr. bonkers");
 	}
 });
 
