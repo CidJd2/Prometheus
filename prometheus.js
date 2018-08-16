@@ -142,11 +142,6 @@ client.on('message', message => {
 				message.reply(resDisplay);
 				break;
 			case "commands":
-				resDisplay += "\n``` Display Supplies\n";
-				resDisplay += "display all: !pro stock\n";
-				resDisplay += "display particular item: !pro stock item-name\n";
-				resDisplay += "\npossible item names: \nemptybottle, fabric, immortal, alcohol, stem, spore, zenorc, mermaid, grenade, acid, coat, slims, starsand\n";
-				resDisplay += "```";
 				resDisplay += "\n``` Get Monster info from the wiki db\n";
 				resDisplay += "!pro mob monster-name\n";
 				resDisplay += "```";
