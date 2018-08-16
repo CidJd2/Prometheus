@@ -289,10 +289,6 @@ client.on('message', message => {
 				resDisplay += "\n```";
 				message.reply(resDisplay);
 		}
-	} else if(message.content.toLowerCase().indexOf("chea ") != -1) {
-		message.reply("some von drama? I'm listening!");
-	} else if(message.content.toLowerCase().indexOf("auxice") != -1) {
-		message.reply("do it @Von#6488 !!");
 	}
 });
 
