@@ -293,7 +293,7 @@ client.on('message', message => {
 			["http://code.jquery.com/jquery.js"],
 			function (err, window) {
 				var randJoke = window.$('#content div:eq(1) p').text();
-				message.reply(randJoke.replace("Chuck Norris", "Anxiety").replace("Chuck norris", "Anxiety")"chuck norris", "Anxiety");
+				message.reply(randJoke.replace("Chuck Norris", "Anxiety").replace("Chuck norris", "Anxiety").replace("chuck norris", "Anxiety"));
 			}
 		);
 	}
