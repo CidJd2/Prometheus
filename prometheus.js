@@ -285,7 +285,7 @@ client.on('message', message => {
 				message.reply(resDisplay);
 		}
 	}
-	if(message.content.toLowerCase().startsWith("prometheus is your friend?")) {
+	if(message.content.toLowerCase().startsWith("prometheus who is your friend?")) {
 		message.reply("Anxiety of course");
 	}
 });
