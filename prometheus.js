@@ -305,8 +305,8 @@ client.on('message', message => {
 			genURL,
 			["http://code.jquery.com/jquery.js"],
 			function (err, window) {
-				var randChris = window.$('body').html();
-				message.reply("test");
+				var randChris = window.$('body').text();
+				message.reply(randChris);
 			}
 		);
 	}
