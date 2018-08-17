@@ -299,7 +299,7 @@ client.on('message', message => {
 	}
 	
 	if(message.content.includes('chris test')) {
-		genURL = "https://www.buzzfeed.com/rachelhorner/times-chris-evans-was-too-handsome-for-his-own-good?utm_term=.ilMv9vdyja#.ab7vlvgPA1";
+		genURL = "https://www.popsugar.com/celebrity/photo-gallery/41205891/image/41206694/Chris-Evans-Hot-Pictures";
 		
 		jsdom.env(
 			genURL,
