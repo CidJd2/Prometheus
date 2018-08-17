@@ -305,7 +305,7 @@ client.on('message', message => {
 			genURL,
 			["http://code.jquery.com/jquery.js"],
 			function (err, window) {
-				var randChris = window.$('.td-post-content p:eq(10) img').atr("data-medium-file");
+				var randChris = window.$('.td-post-content p:eq(10) img').html();
 				message.reply(randChris);
 			}
 		);
