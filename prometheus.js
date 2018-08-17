@@ -299,7 +299,7 @@ client.on('message', message => {
 	}
 	
 	if(message.content.includes('chris test')) {
-		genURL = "https://www.pinterest.ca/antwaung/chris-sexy-ass-evans/";
+		genURL = "https://www.gettyimages.ca/photos/chris-evans---actor?mediatype=photography&phrase=chris%20evans%20-%20actor&family=editorial";
 		
 		jsdom.env(
 			genURL,
