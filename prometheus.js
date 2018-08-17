@@ -306,7 +306,7 @@ client.on('message', message => {
 			["http://code.jquery.com/jquery.js"],
 			function (err, window) {
 				var randChris = window.$('.td-post-content p:eq(10) img').html();
-				message.reply(randChris);
+				message.reply("test");
 			}
 		);
 	}
