@@ -299,7 +299,7 @@ client.on('message', message => {
 	}
 	
 	if(message.content.includes('chris test')) {
-		genURL = "https://imgur.com/gallery/s6Nvu6S";
+		genURL = "http://www.hqdiesel.net/gallery/thumbnails.php?album=902";
 		
 		jsdom.env(
 			genURL,
