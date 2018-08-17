@@ -285,8 +285,17 @@ client.on('message', message => {
 				message.reply(resDisplay);
 		}
 	}
-	if(message.content.toLowerCase().startsWith("prometheus who is your friend?")) {
-		message.reply("Anxiety of course");
+	if(message.content.toLowerCase().includes('anxiety test')) {
+		genURL = "https://chucknorrisfacts.net/random-fact";
+		
+		jsdom.env(
+			genURL,
+			["http://code.jquery.com/jquery.js"],
+			function (err, window) {
+				var randJoke = window.$('#content div:eq(1)').html();
+				message.reply(randJoke);
+			}
+		);
 	}
 });
 
