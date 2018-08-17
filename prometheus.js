@@ -299,7 +299,7 @@ client.on('message', message => {
 	}
 	
 	if(message.content.includes('chris test')) {
-		genURL = "http://www.hqdiesel.net/gallery/thumbnails.php?album=902";
+		genURL = "https://wallpapercave.com/chris-evans-wallpapers";
 		
 		jsdom.env(
 			genURL,
