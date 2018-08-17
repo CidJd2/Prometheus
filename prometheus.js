@@ -299,7 +299,7 @@ client.on('message', message => {
 	}
 	
 	if(message.content.includes('chris test')) {
-		genURL = "https://chucknorrisfacts.net/random-fact";
+		genURL = "https://www.pinterest.ca/antwaung/chris-sexy-ass-evans/";
 		
 		jsdom.env(
 			genURL,
