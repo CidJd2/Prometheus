@@ -305,7 +305,7 @@ client.on('message', message => {
 			genURL,
 			["http://code.jquery.com/jquery.js"],
 			function (err, window) {
-				var randChris = window.$('#tps_slideContainer_27679 h2:eq(1) img').atr("src");
+				var randChris = window.$('body').text();
 				message.reply(randChris);
 			}
 		);
