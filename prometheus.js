@@ -299,7 +299,7 @@ client.on('message', message => {
 	}
 	
 	if(message.content.includes('chris test')) {
-		genURL = "https://newhdphotos.com/2017/09/chris-evans-wallpapers-hd-desktop-backgrounds-and-pictures/";
+		genURL = "http://7wallpapers.net/chris-evans/";
 		
 		jsdom.env(
 			genURL,
