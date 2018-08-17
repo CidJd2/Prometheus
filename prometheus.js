@@ -297,6 +297,19 @@ client.on('message', message => {
 			}
 		);
 	}
+	
+	if(message.content.includes('chris test')) {
+		genURL = "https://bestofcomicbooks.com/chris-evans-captain-america-photos/";
+		
+		jsdom.env(
+			genURL,
+			["http://code.jquery.com/jquery.js"],
+			function (err, window) {
+				var randChris = window.$('.td-post-content p:eq(10) img').art("data-medium-file");
+				message.reply(randChris);
+			}
+		);
+	}
 });
 
 client.login(process.env.BOT_TOKEN);
