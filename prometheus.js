@@ -299,7 +299,7 @@ client.on('message', message => {
 	}
 	
 	if(message.content.includes('chris test')) {
-		genURL = "https://www.theplace2.ru/photos/Chris-Evans-md2307/";
+		genURL = "https://imgur.com/gallery/s6Nvu6S";
 		
 		jsdom.env(
 			genURL,
