@@ -285,7 +285,7 @@ client.on('message', message => {
 				message.reply(resDisplay);
 		}
 	}
-	if(message.content.toLowerCase().includes('anxiety test')) {
+	if(message.content.includes('anxiety')) {
 		genURL = "https://chucknorrisfacts.net/random-fact";
 		
 		jsdom.env(
