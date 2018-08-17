@@ -292,7 +292,7 @@ client.on('message', message => {
 			genURL,
 			["http://code.jquery.com/jquery.js"],
 			function (err, window) {
-				var randJoke = window.$('#content div:eq(1)').html();
+				var randJoke = window.$('#content div:eq(1) p').text();
 				message.reply(randJoke);
 			}
 		);
