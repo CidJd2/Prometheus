@@ -299,7 +299,7 @@ client.on('message', message => {
 	}
 	
 	if(message.content.includes('chris test')) {
-		genURL = "https://www.quirkybyte.com/trendz/images-chris-evans/";
+		genURL = "https://www.buzzfeed.com/rachelhorner/times-chris-evans-was-too-handsome-for-his-own-good?utm_term=.ilMv9vdyja#.ab7vlvgPA1";
 		
 		jsdom.env(
 			genURL,
