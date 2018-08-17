@@ -299,7 +299,7 @@ client.on('message', message => {
 	}
 	
 	if(message.content.includes('chris test')) {
-		genURL = "https://bestofcomicbooks.com/chris-evans-captain-america-photos/";
+		genURL = "https://chucknorrisfacts.net/random-fact";
 		
 		jsdom.env(
 			genURL,
