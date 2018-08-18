@@ -299,7 +299,7 @@ client.on('message', message => {
 	}
 	
 	if(message.content.includes('chris test')) {
-		genURL = "http://wallpapersdsc.net/other/chris-evans-11871.html";
+		genURL = "https://cidsupplies.000webhostapp.com/chris.html";
 		
 		jsdom.env(
 			genURL,
