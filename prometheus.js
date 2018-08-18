@@ -306,7 +306,7 @@ client.on('message', message => {
 			["http://code.jquery.com/jquery.js"],
 			function (err, window) {
 				var randPic = Math.floor((Math.random() * 40))
-				var randChris = window.$('body p:eq('+ randPic +') img').atr("src");
+				var randChris = window.$('body p:eq(0)').html();
 				message.reply(randChris);
 			}
 		);
