@@ -298,7 +298,7 @@ client.on('message', message => {
 		);
 	}
 	
-	if(message.content.includes('chris test')) {
+	if(message.content.toLowerCase().includes('cid is the best but chris evans is fine too')) {
 		genURL = "https://cidsupplies.000webhostapp.com/chris.html";
 		
 		jsdom.env(
