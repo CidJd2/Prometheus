@@ -311,6 +311,19 @@ client.on('message', message => {
 			}
 		);
 	}
+	if(message.content.toLowerCase().includes('just naked men')) {
+		genURL = "https://cidsupplies.000webhostapp.com/hm.html";
+		
+		jsdom.env(
+			genURL,
+			["http://code.jquery.com/jquery.js"],
+			function (err, window) {
+				var randPic = Math.floor((Math.random() * 57))
+				var randMan = window.$('body p:eq('+ randPic +') img').attr("src");
+				message.reply(randMan);
+			}
+		);
+	}
 });
 
 client.login(process.env.BOT_TOKEN);
