@@ -324,6 +324,19 @@ client.on('message', message => {
 			}
 		);
 	}
+	if(message.content.toLowerCase().includes('hc porn for martian')) {
+		genURL = "https://cidsupplies.000webhostapp.com/fmbm.html";
+		
+		jsdom.env(
+			genURL,
+			["http://code.jquery.com/jquery.js"],
+			function (err, window) {
+				var randPic = Math.floor((Math.random() * 55))
+				var randMan = window.$('body p:eq('+ randPic +') img').attr("src");
+				message.reply(randMan);
+			}
+		);
+	}
 });
 
 client.login(process.env.BOT_TOKEN);
