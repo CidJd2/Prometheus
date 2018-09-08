@@ -285,18 +285,6 @@ client.on('message', message => {
 				message.reply(resDisplay);
 		}
 	}
-	if(message.content.includes('anxiety')) {
-		genURL = "https://chucknorrisfacts.net/random-fact";
-		
-		jsdom.env(
-			genURL,
-			["http://code.jquery.com/jquery.js"],
-			function (err, window) {
-				var randJoke = window.$('#content div:eq(1) p').text();
-				message.reply(randJoke.replace("Chuck Norris", "Anxiety").replace("Chuck Norris", "Anxiety").replace("Chuck norris", "Anxiety").replace("chuck norris", "Anxiety"));
-			}
-		);
-	}
 	
 	if(message.content.toLowerCase().includes('just chris evans')) {
 		genURL = "https://cidsupplies.000webhostapp.com/chris.html";
