@@ -340,8 +340,8 @@ client.on('message', message => {
 		);
 	}
 	if(message.content.toLowerCase().includes('test time')) {
-		message.reply("test2"+message.member.toString());
-		console.log(message.member.toString());
+		message.reply("test2"+message.member.displayName);
+		console.log(message.member.displayName);
 	}
 });
 
