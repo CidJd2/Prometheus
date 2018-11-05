@@ -340,7 +340,17 @@ client.on('message', message => {
 		);
 	}
 	if(message.content.toLowerCase().includes('test time')) {
-		message.reply("test2"+message.member.displayName);
+		date = new Date(),
+		datevalues = [
+   			date.getFullYear(),
+   			date.getMonth()+1,
+   			date.getDate(),
+   			date.getHours(),
+   			date.getMinutes(),
+   			date.getSeconds(),
+		];
+		
+		message.reply(datevalues);
 		console.log(message.member.displayName);
 	}
 });
