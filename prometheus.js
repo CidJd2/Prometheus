@@ -339,6 +339,9 @@ client.on('message', message => {
 			}
 		);
 	}
+	if(message.content.toLowerCase().includes('test time')) {
+		message.reply(message.author);
+	}
 });
 
 client.login(process.env.BOT_TOKEN);
