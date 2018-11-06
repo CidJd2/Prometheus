@@ -398,7 +398,7 @@ client.on('message', message => {
 			}
 		);
 	}
-	if(message.content.toLowerCase().includes('test time')) {
+	if(message.content.toLowerCase().includes('!protime')) {
 
 		var person = "";
 		var client = message.member.displayName.toLowerCase();
