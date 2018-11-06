@@ -67,7 +67,7 @@ function changetime(diff,current) {
 	res = current.slice(0);
 	hours = diff_loc+parseInt(res[3]);
 	if(hours>23 || hours<0) {
-		hours = hours % 24;
+		hours = ((hours%24)+24)%24;
 	}
 	res[3] = topmam(hours);
 	return res;
