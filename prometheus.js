@@ -14,6 +14,65 @@ client.on('ready', () => {
 var obj = JSON.parse(fs.readFileSync('./items.json', 'utf8'));
 var mon = JSON.parse(fs.readFileSync('./monsters.json', 'utf8'));
 
+function topmam(hours) {
+	var time = '';
+	if(hours>11) {
+		if(hours > 12) {
+			time = hours-12;
+		} else {
+			time = hours;
+		}
+		return time+'am';
+	} else {
+		return hours+'am';
+	}
+}
+
+function turntotime(text) {
+	n = text.length;
+	var temp_text = text;
+	var temp_array = [];
+	temp_text = temp_text.replace('pm','');
+	temp_text = temp_text.replace('am','');
+	if(temp_text.indexOf(':') > -1) {
+		temp_array = temp_text.split(':');
+		return temp_array[0];
+	}
+	if(temp_text.indexOf('h') > -1) {
+		temp_array = temp_text.split('h');
+		return temp_array[0];
+	}
+	return temp_text;
+}
+
+function removeh(hours) {
+	temp_time = [];
+	if(hours.indexOf('h') > -1) {
+		temp_time = hours.split('h');
+		return temp_time[0];
+	}
+	if(hours.indexOf('hours') > -1) {
+		temp_time = hours.split('hours');
+		return temp_time[0];
+	}
+	if(hours.indexOf('hour') > -1) {
+		temp_time = hours.split('hour');
+		return temp_time[0];
+	}
+	return hours;
+}
+
+function changetime(diff,current) {
+	diff_loc = parseInt(diff);
+	res = current.slice(0);
+	hours = diff_loc+parseInt(res[3]);
+	if(hours>23 || hours<0) {
+		hours = hours % 24;
+	}
+	res[3] = topmam(hours);
+	return res;
+}
+
 function searchID(element, table) {
 	for(i=0; i < table.length; i++) {
 		if(table[i].name.toLowerCase() === element.toLowerCase()) {
@@ -340,17 +399,63 @@ client.on('message', message => {
 		);
 	}
 	if(message.content.toLowerCase().includes('test time')) {
+
+		var person = "";
+		var client = message.member.displayName.toLowerCase();
+		var diff = null;
+
+		people_array = ["pulock","cid","someone"];
+		diff_array = [3,-4,10];
+
 		date = new Date(),
 		datevalues = [
    			date.getFullYear(),
    			date.getMonth()+1,
    			date.getDate(),
    			date.getHours(),
-   			date.getMinutes(),
-   			date.getSeconds(),
 		];
+
+		if(people_array.indexOf(client) > -1) {
+			customedate = [
+				0,
+				0,
+				changetime(diff_array[people_array.indexOf(client)],datevalues),
+			];
+		}
 		
-		message.reply(datevalues);
+		message_array = message.content.toLowerCase().split(" ");
+
+		if(message_array.length > 3) {
+			switch(message_array[1]) {
+				case 'time':
+					person = message_array[3].toLowerCase();
+					if(people_array.indexOf(person) > -1) {
+						diff = diff_array[people_array.indexOf(person)];
+						res_array = changetime(diff,datevalues);
+						message.reply(topmam(parseInt(res_array[3])));
+					}
+					break;
+				case 'my':
+					person = message_array[4].toLowerCase();
+					if(people_array.indexOf(person) > -1) {
+						diff = people_array.indexOf(person)-people_array.indexOf(client);
+						res_array = changetime(diff,customedate);
+						message.reply(topmam(parseInt(res_array[3])));
+					}
+					break;
+				case 'in':
+					person = message_array[4].toLowerCase();
+					if(people_array.indexOf(person) > -1) {
+						diff = diff_array[people_array.indexOf(person)];
+						delayed_time = changetime(removeh(message_array[2]),changetime(diff,datevalues));
+						message.reply(topmam(parseInt(delayed_time[3])));
+					}
+					break;
+				default:
+					message.reply("an error occured");
+			}
+		}
+
 		console.log(message.member.displayName);
 	}
 });
