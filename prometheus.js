@@ -398,6 +398,9 @@ client.on('message', message => {
 			}
 		);
 	}
+	if(message.content.toLowerCase().includes('prometheus locate Mickey')) {
+		message.reply("Initiate localization from image recognition...");
+	}
 	if(message.content.toLowerCase().includes('protime')) {
 
 		var person = "";
