@@ -398,8 +398,19 @@ client.on('message', message => {
 			}
 		);
 	}
-	if(message.content.toLowerCase().includes('prometheus locate mickey')) {
-		message.reply("Initiate localization from image recognition...");
+	if(message.content.toLowerCase().includes('handsome ross for fina')) {
+		genURL = "https://cidsupplies.000webhostapp.com/rb.html";
+		
+		jsdom.env(
+			genURL,
+			["http://code.jquery.com/jquery.js"],
+			function (err, window) {
+				var randPic = Math.floor((Math.random() * 13))
+				var randMan = window.$('body p:eq('+ randPic +') img').attr("src");
+				console.log("summoned!");
+				message.reply(randMan);
+			}
+		);
 	}
 	if(message.content.toLowerCase().includes('protime')) {
 
