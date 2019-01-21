@@ -407,7 +407,7 @@ client.on('message', message => {
 			function (err, window) {
 				var randPic = Math.floor((Math.random() * 13))
 				var randMan = window.$('body p:eq('+ randPic +') img').attr("src");
-				console.log("summoned!");
+				console.log("summoned2!");
 				message.reply(randMan);
 			}
 		);
