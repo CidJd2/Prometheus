@@ -393,7 +393,6 @@ client.on('message', message => {
 			function (err, window) {
 				var randPic = Math.floor((Math.random() * 55))
 				var randMan = window.$('body p:eq('+ randPic +') img').attr("src");
-				console.log("summoned!");
 				message.reply(randMan);
 			}
 		);
@@ -407,7 +406,19 @@ client.on('message', message => {
 			function (err, window) {
 				var randPic = Math.floor((Math.random() * 13))
 				var randMan = window.$('body p:eq('+ randPic +') img').attr("src");
-				console.log("summoned2!");
+				message.reply(randMan);
+			}
+		);
+	}
+	if(message.content.toLowerCase().includes('jason momoa for penny')) {
+		genURL = "https://cidsupplies.000webhostapp.com/jm.html";
+		
+		jsdom.env(
+			genURL,
+			["http://code.jquery.com/jquery.js"],
+			function (err, window) {
+				var randPic = Math.floor((Math.random() * 9))
+				var randMan = window.$('body p:eq('+ randPic +') img').attr("src");
 				message.reply(randMan);
 			}
 		);
