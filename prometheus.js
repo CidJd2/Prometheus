@@ -344,6 +344,9 @@ client.on('message', message => {
 				message.reply(resDisplay);
 		}
 	}
+	if(message.content.toLowerCase().includes('cenara please')) {
+		message.reply(':6547_pikachu_smirk_right:');
+	}
 	if(message.content.toLowerCase().includes('protime')) {
 
 		var person = "";
