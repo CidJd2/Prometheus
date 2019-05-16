@@ -345,7 +345,7 @@ client.on('message', message => {
 		}
 	}
 	if(message.content.toLowerCase().includes('cenara please')) {
-		message.reply(':6547_pikachu_smirk_right:');
+		message.reply('https://discordemoji.com/assets/emoji/PepeKMS.png');
 	}
 	if(message.content.toLowerCase().includes('protime')) {
 
