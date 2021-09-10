@@ -182,7 +182,7 @@ client.on('message', message => {
 			for(var i = 3; i < cmdArray.length; i++) {
 				restOfMessage += " " + cmdArray[i];
 			}
-			channel.send("test");
+			message.channel.send("test");
 		}
 	}
 	/*if(message.content.toLowerCase().startsWith(command)) {
