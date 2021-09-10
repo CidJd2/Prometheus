@@ -3,7 +3,7 @@ var jsdom = require('jsdom');
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-var channel = client.channels.get(885923764657881110);
+var channel = client.channels.get("885923764657881110");
 
 var command = "!mvp";
 
