@@ -3,7 +3,9 @@ var jsdom = require('jsdom');
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-var command = "!pro";
+var channel = client.channels.get("885923764657881110");
+
+var command = "!mvp";
 
 var endMessage = "";
 
@@ -170,8 +172,20 @@ function loopMessage(message, cont, first, second, type, list) {
 		}
 	}
 }
+
 client.on('message', message => {
 	if(message.content.toLowerCase().startsWith(command)) {
+		var cmdArray = message.content.toLowerCase().split(" ");
+		if(cmdArray.length >= 3) {
+			var timer = cmdArray[1];
+			let restOfMessage = cmdArray[2];
+			for(var i = 3; i < cmdArray.length; i++) {
+				restOfMessage += " " + cmdArray[i];
+			}
+			channel.send("test");
+		}
+	}
+	/*if(message.content.toLowerCase().startsWith(command)) {
 		var getURL = "https://cidsupplies.000webhostapp.com/?gr=0";
 		var addURL = "https://cidsupplies.000webhostapp.com/?gr=1";
 		var updURL = "https://cidsupplies.000webhostapp.com/?gr=2";
@@ -406,7 +420,7 @@ client.on('message', message => {
 		}
 
 		console.log(message.member.displayName);
-	}
+	}*/
 });
 
 client.login(process.env.BOT_TOKEN);
