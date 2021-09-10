@@ -182,7 +182,8 @@ client.on('message', message => {
 			for(var i = 3; i < cmdArray.length; i++) {
 				restOfMessage += " " + cmdArray[i];
 			}
-			message.channel.send("test");
+			message.channel.send("!countdown " + timer + "mins");
+			message.channel.send("!natural in "+ timer +" minutes send " + restOfMessage);
 		}
 	}
 	/*if(message.content.toLowerCase().startsWith(command)) {
